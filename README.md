@@ -4,8 +4,7 @@ Automated fish feeder for ICT1003
 **Note:**
 1. TinyCircuit and secondary Arduino board are 2 separate components
 
-**TinyCiruit QR:**
-
+# TinyCiruit QR:
 _Note:_
   1. This is a limited running prototype that was designed to use Bluetooth instead of Wifi
   2. Development for usage of Wifi to send QR code to watch requires an additional hardware component 
@@ -28,3 +27,5 @@ _To run:_
 _Additional future implementations:_
   1. Connect the TinyCircuit to the power source that is used to power the secondary Arduino board
   2. Allow the TinyCircuit to connect to a Wifi network / breadboard used for the secondary Arduino board, which in turn connects to a Wifi network
+
+# Secondary Arduino Board (Arduino WeMos D1 Wifi)
