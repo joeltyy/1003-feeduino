@@ -22,7 +22,7 @@ _To run:_
   - Must be less than 20 characters long
   - Consider using a URL shortener
   5. Link will be converted into a QR code on the watch
-  6. As an added security feature, QR code would be removed afetr 30s
+  6. As an added security feature, QR code would be removed after 30s
 
 _Additional future implementations:_
   1. Connect the TinyCircuit to the power source that is used to power the secondary Arduino board
