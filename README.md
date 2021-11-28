@@ -14,14 +14,14 @@ _Note:_
 
 _To run:_
   1. Download QRCode library by Richard Moore
-    - Sketch -> Include Library -> Manage Libraries
+  - Sketch -> Include Library -> Manage Libraries
   2. Upload Watch_QR codes to TinyCircuit and ensure it is running
   3. Connect phone to TinyCircuit via Bluetooth on the nRF connect app
-    - Default name of the project is set to Feeduino, you can change it if you like in the uart file
-    - Note that both the name and local_name variables have to be changed for it to be reflected correctly in the nRF connect app
+  - Default name of the project is set to Feeduino, you can change it if you like in the uart file
+  - Note that both the name and local_name variables have to be changed for it to be reflected correctly in the nRF connect app
   4. Using the UART RX Characteristic, send a link
-    - Must be less than 20 characters long
-    - Consider using a URL shortener
+  - Must be less than 20 characters long
+  - Consider using a URL shortener
   5. Link will be converted into a QR code on the watch
   6. As an added security feature, QR code would be removed afetr 30s
 
