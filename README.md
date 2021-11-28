@@ -28,4 +28,8 @@ _Additional future implementations:_
   1. Connect the TinyCircuit to the power source that is used to power the secondary Arduino board
   2. Allow the TinyCircuit to connect to a Wifi network / breadboard used for the secondary Arduino board, which in turn connects to a Wifi network
 
-# Secondary Arduino Board (Arduino WeMos D1 Wifi)
+# Secondary Arduino Board
+_Note:_
+  1. This code requires the use of the Blynk app
+  2. Remember to change the Blynk Auth Token, ssid and password to your own
+  - Located in the Arduino_D1_Board folder
