@@ -15,7 +15,7 @@ _Note:_
 _To run:_
   1. Download QRCode library by Richard Moore
     - Sketch -> Include Library -> Manage Libraries
-  2. Upload codes to TinyCircuit and ensure it is running
+  2. Upload Watch_QR codes to TinyCircuit and ensure it is running
   3. Connect phone to TinyCircuit via Bluetooth on the nRF connect app
     - Default name of the project is set to Feeduino, you can change it if you like in the uart file
     - Note that both the name and local_name variables have to be changed for it to be reflected correctly in the nRF connect app
