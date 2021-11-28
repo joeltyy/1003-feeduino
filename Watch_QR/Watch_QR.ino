@@ -68,7 +68,7 @@ void setup() {
   display.setBrightness(15);
   draw_start_screen();
 
-//  if u want to display qr code without bt
+//  if u want to display qr code without bt, uncomment this section and comment out everything in loop()
 //  code = "https://youtu.be/dQw4w9WgXcQ";
 //  SerialUSB.println("Printing QR...");
 //  SerialUSB.print("Code entered: ");
@@ -77,20 +77,20 @@ void setup() {
 //  SerialUSB.println("Done");
   
   //while (!SerialUSB); //This line will block until a serial monitor is opened with TinyScreen+!
-  BLEsetup();
+  BLEsetup(); //comment out this line too if you want it to display a static qr code without bt
 }
 
 void loop() {
   aci_loop();//Process any ACI commands or events from the NRF8001- main BLE handler, must run often. Keep main loop short.
   if (ble_rx_buffer_len) {//Check if data is available
-    code = (char*)ble_rx_buffer;
+    code = (char*)ble_rx_buffer; //takes in whatever was sent via UART RX Characteristic on nRF connect app, max 20 bytes
     SerialUSB.println("Printing QR...");
     SerialUSB.print("Code entered: ");
     SerialUSB.println(code);
     genQRCode();
     SerialUSB.println("Done");
     ble_rx_buffer_len = 0;//clear afer reading
-    for (int i=1; i<31; i++) 
+    for (int i=1; i<31; i++) // time delay, added this function to print out in serial monitor
     {
       SerialUSB.print("Time Delay: ");
       SerialUSB.print(i);
@@ -112,7 +112,6 @@ void genQRCode() {
   qrcode_initText(&qrcode, qrcodeBytes, 3, ECC_LOW, code);
   // Start of display
   display.startData();
-  //lib_aci_send_data(0,"Displaying QR Code",18);
   for (uint8_t y = 0; y < qrcode.size; y++) {
     for (uint8_t x = 0; x < qrcode.size; x++) {
       // Getting color of QR Code at Location X Y
