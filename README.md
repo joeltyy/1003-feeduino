@@ -1,2 +1,3 @@
 # 1003-feeduino
-automated fish feeder for ICT1003
+Automated fish feeder for ICT1003
+
